@@ -1,0 +1,2799 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/twigjs/twig.js"
+
+    >twig (v1.10.4)</a>
+</h1>
+<h4>JS port of the Twig templating language.</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twig">module twig</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.twig">
+            function <span class="apidocSignatureSpan"></span>twig
+            <span class="apidocSignatureSpan">(params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.__express">
+            function <span class="apidocSignatureSpan">twig.</span>__express
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.cache">
+            function <span class="apidocSignatureSpan">twig.</span>cache
+            <span class="apidocSignatureSpan">(cache)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.compile">
+            function <span class="apidocSignatureSpan">twig.</span>compile
+            <span class="apidocSignatureSpan">(markup, options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.extend">
+            function <span class="apidocSignatureSpan">twig.</span>extend
+            <span class="apidocSignatureSpan">(fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.extendFilter">
+            function <span class="apidocSignatureSpan">twig.</span>extendFilter
+            <span class="apidocSignatureSpan">(filter, definition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.extendFunction">
+            function <span class="apidocSignatureSpan">twig.</span>extendFunction
+            <span class="apidocSignatureSpan">(fn, definition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.extendTag">
+            function <span class="apidocSignatureSpan">twig.</span>extendTag
+            <span class="apidocSignatureSpan">(definition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.extendTest">
+            function <span class="apidocSignatureSpan">twig.</span>extendTest
+            <span class="apidocSignatureSpan">(test, definition)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.renderFile">
+            function <span class="apidocSignatureSpan">twig.</span>renderFile
+            <span class="apidocSignatureSpan">(path, options, fn)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">twig.</span>filters</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">twig.</span>path</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">twig.</span>paths</span>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">string <span class="apidocSignatureSpan">twig.</span>VERSION</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twig.compile">module twig.compile</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.compile.compile">
+            function <span class="apidocSignatureSpan">twig.</span>compile
+            <span class="apidocSignatureSpan">(options, files)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">twig.compile.</span>defaults</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twig.filters">module twig.filters</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.abs">
+            function <span class="apidocSignatureSpan">twig.filters.</span>abs
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.batch">
+            function <span class="apidocSignatureSpan">twig.filters.</span>batch
+            <span class="apidocSignatureSpan">(items, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.capitalize">
+            function <span class="apidocSignatureSpan">twig.filters.</span>capitalize
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.date">
+            function <span class="apidocSignatureSpan">twig.filters.</span>date
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.date_modify">
+            function <span class="apidocSignatureSpan">twig.filters.</span>date_modify
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.default">
+            function <span class="apidocSignatureSpan">twig.filters.</span>default
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.e">
+            function <span class="apidocSignatureSpan">twig.filters.</span>e
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.escape">
+            function <span class="apidocSignatureSpan">twig.filters.</span>escape
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.first">
+            function <span class="apidocSignatureSpan">twig.filters.</span>first
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.format">
+            function <span class="apidocSignatureSpan">twig.filters.</span>format
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.join">
+            function <span class="apidocSignatureSpan">twig.filters.</span>join
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.json_encode">
+            function <span class="apidocSignatureSpan">twig.filters.</span>json_encode
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.keys">
+            function <span class="apidocSignatureSpan">twig.filters.</span>keys
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.last">
+            function <span class="apidocSignatureSpan">twig.filters.</span>last
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.length">
+            function <span class="apidocSignatureSpan">twig.filters.</span>length
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.lower">
+            function <span class="apidocSignatureSpan">twig.filters.</span>lower
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.merge">
+            function <span class="apidocSignatureSpan">twig.filters.</span>merge
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.nl2br">
+            function <span class="apidocSignatureSpan">twig.filters.</span>nl2br
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.number_format">
+            function <span class="apidocSignatureSpan">twig.filters.</span>number_format
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.raw">
+            function <span class="apidocSignatureSpan">twig.filters.</span>raw
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.replace">
+            function <span class="apidocSignatureSpan">twig.filters.</span>replace
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.reverse">
+            function <span class="apidocSignatureSpan">twig.filters.</span>reverse
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.round">
+            function <span class="apidocSignatureSpan">twig.filters.</span>round
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.slice">
+            function <span class="apidocSignatureSpan">twig.filters.</span>slice
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.sort">
+            function <span class="apidocSignatureSpan">twig.filters.</span>sort
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.split">
+            function <span class="apidocSignatureSpan">twig.filters.</span>split
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.striptags">
+            function <span class="apidocSignatureSpan">twig.filters.</span>striptags
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.title">
+            function <span class="apidocSignatureSpan">twig.filters.</span>title
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.trim">
+            function <span class="apidocSignatureSpan">twig.filters.</span>trim
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.truncate">
+            function <span class="apidocSignatureSpan">twig.filters.</span>truncate
+            <span class="apidocSignatureSpan">(value, params)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.upper">
+            function <span class="apidocSignatureSpan">twig.filters.</span>upper
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.filters.url_encode">
+            function <span class="apidocSignatureSpan">twig.filters.</span>url_encode
+            <span class="apidocSignatureSpan">(value)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twig.path">module twig.path</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.path.parsePath">
+            function <span class="apidocSignatureSpan">twig.path.</span>parsePath
+            <span class="apidocSignatureSpan">(template, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.path.relativePath">
+            function <span class="apidocSignatureSpan">twig.path.</span>relativePath
+            <span class="apidocSignatureSpan">(template, file)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.twig.paths">module twig.paths</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.paths.findBase">
+            function <span class="apidocSignatureSpan">twig.paths.</span>findBase
+            <span class="apidocSignatureSpan">(file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.paths.mkdir">
+            function <span class="apidocSignatureSpan">twig.paths.</span>mkdir
+            <span class="apidocSignatureSpan">(dir)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.paths.normalize">
+            function <span class="apidocSignatureSpan">twig.paths.</span>normalize
+            <span class="apidocSignatureSpan">(file_arr)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.paths.relativePath">
+            function <span class="apidocSignatureSpan">twig.paths.</span>relativePath
+            <span class="apidocSignatureSpan">(base, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.paths.removePath">
+            function <span class="apidocSignatureSpan">twig.paths.</span>removePath
+            <span class="apidocSignatureSpan">(path, file)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.twig.paths.strip_slash">
+            function <span class="apidocSignatureSpan">twig.paths.</span>strip_slash
+            <span class="apidocSignatureSpan">(path)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twig" id="apidoc.module.twig">module twig</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twig.twig" id="apidoc.element.twig.twig">
+        function <span class="apidocSignatureSpan"></span>twig
+        <span class="apidocSignatureSpan">(params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function twig(params) {
+	        &#x27;use strict&#x27;;
+	        var id = params.id,
+	            options = {
+	                strict_variables: params.strict_variables || false,
+	                // TODO: turn autoscape on in the next major version
+	                autoescape: params.autoescape != null &#x26;&#x26; params.autoescape || false,
+	                allowInlineIncludes: params.allowInlineIncludes || false,
+	                rethrow: params.rethrow || false,
+	                namespaces: params.namespaces
+	            };
+
+	        if (Twig.cache &#x26;&#x26; id) {
+	            Twig.validateId(id);
+	        }
+
+	        if (params.debug !== undefined) {
+	            Twig.debug = params.debug;
+	        }
+	        if (params.trace !== undefined) {
+	            Twig.trace = params.trace;
+	        }
+
+	        if (params.data !== undefined) {
+	            return Twig.Templates.parsers.twig({
+	                data: params.data,
+	                path: params.hasOwnProperty(&#x27;path&#x27;) ? params.path : undefined,
+	                module: params.module,
+	                id:   id,
+	                options: options
+	            });
+
+	        } else if (params.ref !== undefined) {
+	            if (params.id !== undefined) {
+	                throw new Twig.Error(&#x22;Both ref and id cannot be set on a twig.js template.&#x22;);
+	            }
+	            return Twig.Templates.load(params.ref);
+	
+	        } else if (params.method !== undefined) {
+	            if (!Twig.Templates.isRegisteredLoader(params.method)) {
+	                throw new Twig.Error(&#x27;Loader for &#x22;&#x27; + params.method + &#x27;&#x22; is not defined.&#x27;);
+	            }
+	            return Twig.Templates.loadRemote(params.name || params.href || params.path || id || undefined, {
+	                id: id,
+	                method: params.method,
+	                parser: params.parser || &#x27;twig&#x27;,
+	                base: params.base,
+	                module: params.module,
+	                precompiled: params.precompiled,
+	                async: params.async,
+	                options: options
+
+	            }, params.load, params.error);
+
+	        } else if (params.href !== undefined) {
+	            return Twig.Templates.loadRemote(params.href, {
+	                id: id,
+	                method: &#x27;ajax&#x27;,
+	                parser: params.parser || &#x27;twig&#x27;,
+	                base: params.base,
+	                module: params.module,
+	                precompiled: params.precompiled,
+	                async: params.async,
+	                options: options
+
+	            }, params.load, params.error);
+
+	        } else if (params.path !== undefined) {
+	            return Twig.Templates.loadRemote(params.path, {
+	                id: id,
+	                method: &#x27;fs&#x27;,
+	                parser: params.parser || &#x27;twig&#x27;,
+	                base: params.base,
+	                module: params.module,
+	                precompiled: params.precompiled,
+	                async: params.async,
+	                options: options
+
+	            }, params.load, params.error);
+	        }
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	            return Twig.lib.min.apply(null, arguments);
+	        },
+	        template_from_string: function(template) {
+	            if (template === undefined) {
+	                template = &#x27;&#x27;;
+	            }
+	            return Twig.Templates.parsers.<span class="apidocCodeKeywordSpan">twig</span>({
+	                options: this.options,
+	                data: template
+	            });
+	        },
+	        random: function(value) {
+	            var LIMIT_INT31 = 0x80000000;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.__express" id="apidoc.element.twig.__express">
+        function <span class="apidocSignatureSpan">twig.</span>__express
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">__express = function (path, options, fn) {
+	        // handle callback in options
+	        if (typeof options === &#x27;function&#x27;) {
+	            fn = options;
+	            options = {};
+	        }
+
+	        options = options || {};
+
+	        var settings = options.settings || {};
+
+	        var params = {
+	            path: path,
+	            base: settings.views,
+	            load: function(template) {
+	                // render and return template as a simple string, see https://github.com/twigjs/twig.js/pull/348 for more information
+	                fn(null, &#x27;&#x27; + template.render(options));
+	            }
+	        };
+
+	        // mixin any options provided to the express app.
+	        var view_options = settings[&#x27;twig options&#x27;];
+
+	        if (view_options) {
+	            for (var option in view_options) {
+	                if (view_options.hasOwnProperty(option)) {
+	                    params[option] = view_options[option];
+	                }
+	            }
+	        }
+
+	        Twig.exports.twig(params);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.cache" id="apidoc.element.twig.cache">
+        function <span class="apidocSignatureSpan">twig.</span>cache
+        <span class="apidocSignatureSpan">(cache)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">cache = function (cache) {
+	        Twig.cache = cache;
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.compile" id="apidoc.element.twig.compile">
+        function <span class="apidocSignatureSpan">twig.</span>compile
+        <span class="apidocSignatureSpan">(markup, options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (markup, options) {
+	        var id = options.filename,
+	            path = options.filename,
+	            template;
+
+	        // Try to load the template from the cache
+	        template = new Twig.Template({
+	            data: markup,
+	            path: path,
+	            id: id,
+	            options: options.settings[&#x27;twig options&#x27;]
+	        }); // Twig.Templates.load(id) ||
+
+	        return function(context) {
+	            return template.render(context);
+	        };
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	            return &#x27;ajax&#x27;;
+	        }
+	        return this.method || &#x27;fs&#x27;;
+	    };
+
+	    Twig.Template.prototype.compile = function(options) {
+	        // compile the template into raw JS
+	        return Twig.compiler.<span class="apidocCodeKeywordSpan">compile</span>(this, options);
+	    };
+
+	    /**
+	     * Create safe output
+	     *
+	     * @param {string} Content safe to output
+	     *
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.extend" id="apidoc.element.twig.extend">
+        function <span class="apidocSignatureSpan">twig.</span>extend
+        <span class="apidocSignatureSpan">(fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extend = function (fn) {
+	        fn(Twig);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	        return true;
+	    }
+
+	    /**
+	     * Register a template loader
+	     *
+	     * @example
+	     * Twig.<span class="apidocCodeKeywordSpan">extend</span>(function(Twig) {
+	     *    Twig.Templates.registerLoader(&#x27;custom_loader&#x27;, function(location, params, callback, error_callback) {
+	     *        // ... load the template ...
+	     *        params.data = loadedTemplateData;
+	     *        // create and return the template
+	     *        var template = new Twig.Template(params);
+	     *        if (typeof callback === &#x27;function&#x27;) {
+	     *            callback(template);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.extendFilter" id="apidoc.element.twig.extendFilter">
+        function <span class="apidocSignatureSpan">twig.</span>extendFilter
+        <span class="apidocSignatureSpan">(filter, definition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extendFilter = function (filter, definition) {
+	        Twig.filter.extend(filter, definition);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.extendFunction" id="apidoc.element.twig.extendFunction">
+        function <span class="apidocSignatureSpan">twig.</span>extendFunction
+        <span class="apidocSignatureSpan">(fn, definition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extendFunction = function (fn, definition) {
+	        Twig._function.extend(fn, definition);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.extendTag" id="apidoc.element.twig.extendTag">
+        function <span class="apidocSignatureSpan">twig.</span>extendTag
+        <span class="apidocSignatureSpan">(definition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extendTag = function (definition) {
+	        Twig.logic.extend(definition);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.extendTest" id="apidoc.element.twig.extendTest">
+        function <span class="apidocSignatureSpan">twig.</span>extendTest
+        <span class="apidocSignatureSpan">(test, definition)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">extendTest = function (test, definition) {
+	        Twig.test.extend(test, definition);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.renderFile" id="apidoc.element.twig.renderFile">
+        function <span class="apidocSignatureSpan">twig.</span>renderFile
+        <span class="apidocSignatureSpan">(path, options, fn)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">renderFile = function (path, options, fn) {
+	        // handle callback in options
+	        if (typeof options === &#x27;function&#x27;) {
+	            fn = options;
+	            options = {};
+	        }
+
+	        options = options || {};
+
+	        var settings = options.settings || {};
+
+	        var params = {
+	            path: path,
+	            base: settings.views,
+	            load: function(template) {
+	                // render and return template as a simple string, see https://github.com/twigjs/twig.js/pull/348 for more information
+	                fn(null, &#x27;&#x27; + template.render(options));
+	            }
+	        };
+
+	        // mixin any options provided to the express app.
+	        var view_options = settings[&#x27;twig options&#x27;];
+
+	        if (view_options) {
+	            for (var option in view_options) {
+	                if (view_options.hasOwnProperty(option)) {
+	                    params[option] = view_options[option];
+	                }
+	            }
+	        }
+
+	        Twig.exports.twig(params);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+### Usage without Express
+
+If you don&#x27;t want to use Express, you can render a template with the following method:
+
+```js
+import Twig from &#x27;twig&#x27;;
+Twig.<span class="apidocCodeKeywordSpan">renderFile</span>(&#x27;./path/to/someFile.twig&#x27;, {foo:&#x27;bar&#x27;}, (err, html
+) =&#x3e; {
+  html; // compiled string
+});
+```
+
+### Usage with Express
+
+Twig is compatible with express 2 and 3. You can create an express app using the twig.js templating language by setting the view
+ engine to twig.
+...</pre></li>
+    </ul>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twig.compile" id="apidoc.module.twig.compile">module twig.compile</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twig.compile.compile" id="apidoc.element.twig.compile.compile">
+        function <span class="apidocSignatureSpan">twig.</span>compile
+        <span class="apidocSignatureSpan">(options, files)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">compile = function (options, files) {
+    // Create output template directory if necessary
+    if (options.output) {
+        PATHS.mkdir(options.output);
+    }
+
+    files.forEach(function(file) {
+        FS.stat(file, function(err, stats) {
+            if (stats.isDirectory()) {
+                parseTemplateFolder(file, options.pattern);
+            } else if (stats.isFile()) {
+                parseTemplateFile(file);
+            } else {
+                console.log(&#x22;ERROR &#x22; + file + &#x22;: Unable to stat file&#x22;);
+            }
+        });
+    });
+
+    function parseTemplateFolder(directory, pattern) {
+        directory = PATHS.strip_slash(directory);
+
+       // Get the files in the directory
+       // Walker options
+        var walker  = WALK.walk(directory, { followLinks: false })
+            , files = [];
+
+        walker.on(&#x27;file&#x27;, function(root, stat, next) {
+            // normalize (remove / from end if present)
+            root = PATHS.strip_slash(root);
+
+            // match against file pattern
+            var name = stat.name
+                , file = root + &#x27;/&#x27; + name;
+            if (MINIMATCH(name, pattern)) {
+                parseTemplateFile(file, directory);
+                files.push(file);
+            }
+            next();
+        });
+
+        walker.on(&#x27;end&#x27;, function() {
+            // console.log(files);
+        });
+    }
+
+    function parseTemplateFile(file, base) {
+        if (base) base = PATHS.strip_slash(base);
+        var split_file = file.split(&#x22;/&#x22;)
+            , output_file_name = split_file.pop()
+            , output_file_base = PATHS.findBase(file)
+            , output_directory = options.output
+            , output_base = PATHS.removePath(base, output_file_base)
+            , output_id
+            , output_file;
+
+        if (output_directory) {
+            // Create template directory
+            if (output_base !== &#x22;&#x22;) {
+                PATHS.mkdir(output_directory + &#x22;/&#x22; + output_base);
+                output_base += &#x22;/&#x22;;
+            }
+            output_id = output_directory + &#x22;/&#x22; + output_base + output_file_name;
+            output_file = output_id + &#x22;.js&#x22;
+        } else {
+            output_id = file;
+            output_file = output_id + &#x22;.js&#x22;
+        }
+
+        var tpl = twig({
+            id: output_id
+            , path: file
+            , load: function(template) {
+                // compile!
+                var output = template.compile(options);
+
+                FS.writeFile(output_file, output, &#x27;utf8&#x27;, function(err) {
+                    if (err) {
+                        console.log(&#x22;Unable to compile &#x22; + file + &#x22;, error &#x22; + err);
+                    } else {
+                        console.log(&#x22;Compiled &#x22; + file + &#x22;\t-&#x3e; &#x22; + output_file);
+                    }
+                });
+            }
+        });
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	            return &#x27;ajax&#x27;;
+	        }
+	        return this.method || &#x27;fs&#x27;;
+	    };
+
+	    Twig.Template.prototype.compile = function(options) {
+	        // compile the template into raw JS
+	        return Twig.compiler.<span class="apidocCodeKeywordSpan">compile</span>(this, options);
+	    };
+
+	    /**
+	     * Create safe output
+	     *
+	     * @param {string} Content safe to output
+	     *
+...</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twig.filters" id="apidoc.module.twig.filters">module twig.filters</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.abs" id="apidoc.element.twig.filters.abs">
+        function <span class="apidocSignatureSpan">twig.filters.</span>abs
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">abs = function (value) {
+	            if (value === undefined || value === null) {
+	                return;
+	            }
+
+	            return Math.abs(value);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	        }
+	        var n = 0;
+	        if (arguments.length &#x3e; 0) {
+	            n = Number(arguments[1]);
+	            if (n !== n) { // shortcut for verifying if it&#x27;s NaN
+	                n = 0;
+	            } else if (n !== 0 &#x26;&#x26; n !== Infinity &#x26;&#x26; n !== -Infinity) {
+	                n = (n &#x3e; 0 || -1) * Math.floor(Math.<span class="apidocCodeKeywordSpan">abs</span>(n));
+	            }
+	        }
+	        if (n &#x3e;= len) {
+	            // console.log(&#x22;indexOf not found1 &#x22;, JSON.stringify(searchElement), JSON.stringify(arr));
+	            return -1;
+	        }
+	        var k = n &#x3e;= 0 ? n : Math.max(len - Math.abs(n), 0);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.batch" id="apidoc.element.twig.filters.batch">
+        function <span class="apidocSignatureSpan">twig.filters.</span>batch
+        <span class="apidocSignatureSpan">(items, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">batch = function (items, params) {
+	            var size = params.shift(),
+	                fill = params.shift(),
+	                result,
+	                last,
+	                missing;
+
+	            if (!Twig.lib.is(&#x22;Array&#x22;, items)) {
+	                throw new Twig.Error(&#x22;batch filter expects items to be an array&#x22;);
+	            }
+
+	            if (!Twig.lib.is(&#x22;Number&#x22;, size)) {
+	                throw new Twig.Error(&#x22;batch filter expects size to be a number&#x22;);
+	            }
+
+	            size = Math.ceil(size);
+
+	            result = Twig.lib.chunkArray(items, size);
+
+	            if (fill &#x26;&#x26; items.length % size != 0) {
+	                last = result.pop();
+	                missing = size - last.length;
+
+	                while (missing--) {
+	                    last.push(fill);
+	                }
+
+	                result.push(last);
+	            }
+
+	            return result;
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.capitalize" id="apidoc.element.twig.filters.capitalize">
+        function <span class="apidocSignatureSpan">twig.filters.</span>capitalize
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">capitalize = function (value) {
+	            if ( typeof value !== &#x22;string&#x22; ) {
+	                 return value;
+	            }
+
+	            return value.substr(0, 1).toUpperCase() + value.toLowerCase().substr(1);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.date" id="apidoc.element.twig.filters.date">
+        function <span class="apidocSignatureSpan">twig.filters.</span>date
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">date = function (value, params) {
+	            var date = Twig.functions.date(value);
+	            var format = params &#x26;&#x26; params.length ? params[0] : &#x27;F j, Y H:i&#x27;;
+	            return Twig.lib.date(format, date);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	            if (params.length === 0) {
+	                throw new Twig.Error(&#x22;Filter merge expects at least one parameter&#x22;);
+	            }
+
+	            return obj;
+	        },
+	        date: function(value, params) {
+	            var date = Twig.functions.<span class="apidocCodeKeywordSpan">date</span>(value);
+	            var format = params &#x26;&#x26; params.length ? params[0] : &#x27;F j, Y H:i&#x27;;
+	            return Twig.lib.date(format, date);
+	        },
+
+	        date_modify: function(value, params) {
+	            if (value === undefined || value === null) {
+	                return;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.date_modify" id="apidoc.element.twig.filters.date_modify">
+        function <span class="apidocSignatureSpan">twig.filters.</span>date_modify
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">date_modify = function (value, params) {
+	            if (value === undefined || value === null) {
+	                return;
+	            }
+	            if (params === undefined || params.length !== 1) {
+	                throw new Twig.Error(&#x22;date_modify filter expects 1 argument&#x22;);
+	            }
+
+	            var modifyText = params[0], time;
+
+	            if (Twig.lib.is(&#x22;Date&#x22;, value)) {
+	                time = Twig.lib.strtotime(modifyText, value.getTime() / 1000);
+	            }
+	            if (Twig.lib.is(&#x22;String&#x22;, value)) {
+	                time = Twig.lib.strtotime(modifyText, Twig.lib.strtotime(value));
+	            }
+	            if (Twig.lib.is(&#x22;Number&#x22;, value)) {
+	                time = Twig.lib.strtotime(modifyText, value);
+	            }
+
+	            return new Date(time * 1000);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.default" id="apidoc.element.twig.filters.default">
+        function <span class="apidocSignatureSpan">twig.filters.</span>default
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">default = function (value, params) {
+	            if (params !== undefined &#x26;&#x26; params.length &#x3e; 1) {
+	                throw new Twig.Error(&#x22;default filter expects one argument&#x22;);
+	            }
+	            if (value === undefined || value === null || value === &#x27;&#x27; ) {
+	                if (params === undefined) {
+	                    return &#x27;&#x27;;
+	                }
+
+	                return params[0];
+	            } else {
+	                return value;
+	            }
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.e" id="apidoc.element.twig.filters.e">
+        function <span class="apidocSignatureSpan">twig.filters.</span>e
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">e = function (value, params) {
+	            return Twig.filters.escape(value, params);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.escape" id="apidoc.element.twig.filters.escape">
+        function <span class="apidocSignatureSpan">twig.filters.</span>escape
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">escape = function (value, params) {
+	            if (value === undefined|| value === null){
+	                return;
+	            }
+
+	            var strategy = &#x22;html&#x22;;
+	            if(params &#x26;&#x26; params.length &#x26;&#x26; params[0] !== true)
+	                strategy = params[0];
+
+	            if(strategy == &#x22;html&#x22;) {
+	                var raw_value = value.toString().replace(/&#x26;/g, &#x22;&#x26;amp;&#x22;)
+	                            .replace(/&#x3c;/g, &#x22;&#x26;lt;&#x22;)
+	                            .replace(/&#x3e;/g, &#x22;&#x26;gt;&#x22;)
+	                            .replace(/&#x22;/g, &#x22;&#x26;quot;&#x22;)
+	                            .replace(/&#x27;/g, &#x22;&#x26;#039;&#x22;);
+	                return Twig.Markup(raw_value, &#x27;html&#x27;);
+	            } else if(strategy == &#x22;js&#x22;) {
+	                var raw_value = value.toString();
+	                var result = &#x22;&#x22;;
+
+	                for(var i = 0; i &#x3c; raw_value.length; i++) {
+	                    if(raw_value[i].match(/^[a-zA-Z0-9,\._]$/))
+	                        result += raw_value[i];
+	                    else {
+	                        var char_code = raw_value.charCodeAt(i);
+
+	                        if(char_code &#x3c; 0x80)
+	                            result += &#x22;\\x&#x22; + char_code.toString(16).toUpperCase();
+	                        else
+	                            result += Twig.lib.sprintf(&#x22;\\u%04s&#x22;, char_code.toString(16).toUpperCase());
+	                    }
+	                }
+
+	                return Twig.Markup(result, &#x27;js&#x27;);
+	            } else if(strategy == &#x22;css&#x22;) {
+	                var raw_value = value.toString();
+	                var result = &#x22;&#x22;;
+
+	                for(var i = 0; i &#x3c; raw_value.length; i++) {
+	                    if(raw_value[i].match(/^[a-zA-Z0-9]$/))
+	                        result += raw_value[i];
+	                    else {
+	                        var char_code = raw_value.charCodeAt(i);
+	                        result += &#x22;\\&#x22; + char_code.toString(16).toUpperCase() + &#x22; &#x22;;
+	                    }
+	                }
+
+	                return Twig.Markup(result, &#x27;css&#x27;);
+	            } else if(strategy == &#x22;url&#x22;) {
+	                var result = Twig.filters.url_encode(value);
+	                return Twig.Markup(result, &#x27;url&#x27;);
+	            } else if(strategy == &#x22;html_attr&#x22;) {
+	                var raw_value = value.toString();
+	                var result = &#x22;&#x22;;
+
+	                for(var i = 0; i &#x3c; raw_value.length; i++) {
+	                    if(raw_value[i].match(/^[a-zA-Z0-9,\.\-_]$/))
+	                        result += raw_value[i];
+	                    else if(raw_value[i].match(/^[&#x26;&#x3c;&#x3e;&#x22;]$/))
+	                        result += raw_value[i].replace(/&#x26;/g, &#x22;&#x26;amp;&#x22;)
+	                                .replace(/&#x3c;/g, &#x22;&#x26;lt;&#x22;)
+	                                .replace(/&#x3e;/g, &#x22;&#x26;gt;&#x22;)
+	                                .replace(/&#x22;/g, &#x22;&#x26;quot;&#x22;);
+	                    else {
+	                        var char_code = raw_value.charCodeAt(i);
+
+	                        // The following replaces characters undefined in HTML with
+	                        // the hex entity for the Unicode replacement character.
+	                        if(char_code &#x3c;= 0x1f &#x26;&#x26; char_code != 0x09 &#x26;&#x26; char_code != 0x0a &#x26;&#x26; char_code != 0x0d)
+	                            result += &#x22;&#x26;#xFFFD;&#x22;;
+	                        else if(char_code &#x3c; 0x80)
+	                            result += Twig.lib.sprintf(&#x22;&#x26;#x%02s;&#x22;, char_code.toString(16).toUpperCase());
+	                        else
+	                            result += Twig.lib.sprintf(&#x22;&#x26;#x%04s;&#x22;, char_code.toString(16).toUpperCase());
+	                    }
+	                }
+
+	                return Twig.Markup(result, &#x27;html_attr&#x27;);
+	            } else {
+	                throw new Twig.Error(&#x22;escape strategy unsupported&#x22;);
+	            }
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	        if(typeof this.options.autoescape == &#x27;string&#x27;)
+	            strategy = this.options.autoescape;
+
+	        // [].map would be better but it&#x27;s not supported by IE8-
+	        var escaped_output = [];
+	        Twig.forEach(output, function (str) {
+	            if (str &#x26;&#x26; (str.twig_markup !== true &#x26;&#x26; str.twig_markup != strategy)) {
+	                str = Twig.filters.<span class="apidocCodeKeywordSpan">escape</span>(str, [ strategy ]);
+	            }
+	            escaped_output.push(str);
+	        });
+	        return Twig.Markup(escaped_output.join(&#x22;&#x22;));
+	    }
+
+	    // Namespace for template storage and retrieval
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.first" id="apidoc.element.twig.filters.first">
+        function <span class="apidocSignatureSpan">twig.filters.</span>first
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">first = function (value) {
+	            if (is(&#x22;Array&#x22;, value)) {
+	                return value[0];
+	            } else if (is(&#x22;Object&#x22;, value)) {
+	                if (&#x27;_keys&#x27; in value) {
+	                    return value[value._keys[0]];
+	                }
+	            } else if ( typeof value === &#x22;string&#x22; ) {
+	                return value.substr(0, 1);
+	            }
+
+	            return;
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.format" id="apidoc.element.twig.filters.format">
+        function <span class="apidocSignatureSpan">twig.filters.</span>format
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">format = function (value, params) {
+	            if (value === undefined || value === null){
+	                return;
+	            }
+
+	            return Twig.lib.vsprintf(value, params);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.join" id="apidoc.element.twig.filters.join">
+        function <span class="apidocSignatureSpan">twig.filters.</span>join
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">join = function (value, params) {
+	            if (value === undefined || value === null){
+	                return;
+	            }
+
+	            var join_str = &#x22;&#x22;,
+	                output = [],
+	                keyset = null;
+
+	            if (params &#x26;&#x26; params[0]) {
+	                join_str = params[0];
+	            }
+	            if (is(&#x22;Array&#x22;, value)) {
+	                output = value;
+	            } else {
+	                keyset = value._keys || Object.keys(value);
+	                Twig.forEach(keyset, function(key) {
+	                    if (key === &#x22;_keys&#x22;) return; // Ignore the _keys property
+	                    if (value.hasOwnProperty(key)) {
+	                        output.push(value[key]);
+	                    }
+	                });
+	            }
+	            return output.join(join_str);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	     *
+	     * @param {Array} Output token&#x27;s stack
+	     *
+	     * @return {string|String} Autoescaped output
+	     */
+	    Twig.output = function(output) {
+	        if (!this.options.autoescape) {
+	            return output.<span class="apidocCodeKeywordSpan">join</span>(&#x22;&#x22;);
+	        }
+
+	        var strategy = &#x27;html&#x27;;
+	        if(typeof this.options.autoescape == &#x27;string&#x27;)
+	            strategy = this.options.autoescape;
+
+	        // [].map would be better but it&#x27;s not supported by IE8-
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.json_encode" id="apidoc.element.twig.filters.json_encode">
+        function <span class="apidocSignatureSpan">twig.filters.</span>json_encode
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">json_encode = function (value) {
+	            if(value === undefined || value === null) {
+	                return &#x22;null&#x22;;
+	            }
+	            else if ((typeof value == &#x27;object&#x27;) &#x26;&#x26; (is(&#x22;Array&#x22;, value))) {
+	                output = [];
+
+	                Twig.forEach(value, function(v) {
+	                    output.push(Twig.filters.json_encode(v));
+	                });
+
+	                return &#x22;[&#x22; + output.join(&#x22;,&#x22;) + &#x22;]&#x22;;
+	            }
+	            else if (typeof value == &#x27;object&#x27;) {
+	                var keyset = value._keys || Object.keys(value),
+	                output = [];
+
+	                Twig.forEach(keyset, function(key) {
+	                    output.push(JSON.stringify(key) + &#x22;:&#x22; + Twig.filters.json_encode(value[key]));
+	                });
+
+	                return &#x22;{&#x22; + output.join(&#x22;,&#x22;) + &#x22;}&#x22;;
+	            }
+	            else {
+	                return JSON.stringify(value);
+	            }
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	            if(value === undefined || value === null) {
+	                return &#x22;null&#x22;;
+	            }
+	            else if ((typeof value == &#x27;object&#x27;) &#x26;&#x26; (is(&#x22;Array&#x22;, value))) {
+	                output = [];
+
+	                Twig.forEach(value, function(v) {
+	                    output.push(Twig.filters.<span class="apidocCodeKeywordSpan">json_encode</span>(v));
+	                });
+
+	                return &#x22;[&#x22; + output.join(&#x22;,&#x22;) + &#x22;]&#x22;;
+	            }
+	            else if (typeof value == &#x27;object&#x27;) {
+	                var keyset = value._keys || Object.keys(value),
+	                output = [];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.keys" id="apidoc.element.twig.filters.keys">
+        function <span class="apidocSignatureSpan">twig.filters.</span>keys
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keys = function (value) {
+	            if (value === undefined || value === null){
+	                return;
+	           }
+
+	            var keyset = value._keys || Object.keys(value),
+	                output = [];
+
+	            Twig.forEach(keyset, function(key) {
+	                if (key === &#x22;_keys&#x22;) return; // Ignore the _keys property
+	                if (value.hasOwnProperty(key)) {
+	                    output.push(key);
+	                }
+	            });
+	            return output;
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	          // d. Increase k by 1.
+	          k++;
+	        }
+	        // 8. return undefined
+	    };
+
+	    Twig.merge = function(target, source, onlyChanged) {
+	        Twig.forEach(Object.<span class="apidocCodeKeywordSpan">keys</span>(source), function (key) {
+	            if (onlyChanged &#x26;&#x26; !(key in target)) {
+	                return;
+	            }
+
+	            target[key] = source[key]
+	        });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.last" id="apidoc.element.twig.filters.last">
+        function <span class="apidocSignatureSpan">twig.filters.</span>last
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">last = function (value) {
+	            if (Twig.lib.is(&#x27;Object&#x27;, value)) {
+	                var keys;
+
+	                if (value._keys === undefined) {
+	                    keys = Object.keys(value);
+	                } else {
+	                    keys = value._keys;
+	                }
+
+	                return value[keys[keys.length - 1]];
+	            }
+
+	            // string|array
+	            return value[value.length - 1];
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.length" id="apidoc.element.twig.filters.length">
+        function <span class="apidocSignatureSpan">twig.filters.</span>length
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">length = function (value) {
+	            if (Twig.lib.is(&#x22;Array&#x22;, value) || typeof value === &#x22;string&#x22;) {
+	                return value.length;
+	            } else if (Twig.lib.is(&#x22;Object&#x22;, value)) {
+	                if (value._keys === undefined) {
+	                    return Object.keys(value).length;
+	                } else {
+	                    return value._keys.length;
+	                }
+	            } else {
+	                return 0;
+	            }
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.lower" id="apidoc.element.twig.filters.lower">
+        function <span class="apidocSignatureSpan">twig.filters.</span>lower
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">lower = function (value) {
+	            if ( typeof value !== &#x22;string&#x22; ) {
+	               return value;
+	            }
+
+	            return value.toLowerCase();
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.merge" id="apidoc.element.twig.filters.merge">
+        function <span class="apidocSignatureSpan">twig.filters.</span>merge
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">merge = function (value, params) {
+	            var obj = [],
+	                arr_index = 0,
+	                keyset = [];
+
+	            // Check to see if all the objects being merged are arrays
+	            if (!is(&#x22;Array&#x22;, value)) {
+	                // Create obj as an Object
+	                obj = { };
+	            } else {
+	                Twig.forEach(params, function(param) {
+	                    if (!is(&#x22;Array&#x22;, param)) {
+	                        obj = { };
+	                    }
+	                });
+	            }
+	            if (!is(&#x22;Array&#x22;, obj)) {
+	                obj._keys = [];
+	            }
+
+	            if (is(&#x22;Array&#x22;, value)) {
+	                Twig.forEach(value, function(val) {
+	                    if (obj._keys) obj._keys.push(arr_index);
+	                    obj[arr_index] = val;
+	                    arr_index++;
+	                });
+	            } else {
+	                keyset = value._keys || Object.keys(value);
+	                Twig.forEach(keyset, function(key) {
+	                    obj[key] = value[key];
+	                    obj._keys.push(key);
+
+	                    // Handle edge case where a number index in an object is greater than
+	                    //   the array counter. In such a case, the array counter is increased
+	                    //   one past the index.
+	                    //
+	                    // Example {{ [&#x22;a&#x22;, &#x22;b&#x22;]|merge({&#x22;4&#x22;:&#x22;value&#x22;}, [&#x22;c&#x22;, &#x22;d&#x22;])
+	                    // Without this, d would have an index of &#x22;4&#x22; and overwrite the value
+	                    //   of &#x22;value&#x22;
+	                    var int_key = parseInt(key, 10);
+	                    if (!isNaN(int_key) &#x26;&#x26; int_key &#x3e;= arr_index) {
+	                        arr_index = int_key + 1;
+	                    }
+	                });
+	            }
+
+	            // mixin the merge arrays
+	            Twig.forEach(params, function(param) {
+	                if (is(&#x22;Array&#x22;, param)) {
+	                    Twig.forEach(param, function(val) {
+	                        if (obj._keys) obj._keys.push(arr_index);
+	                        obj[arr_index] = val;
+	                        arr_index++;
+	                    });
+	                } else {
+	                    keyset = param._keys || Object.keys(param);
+	                    Twig.forEach(keyset, function(key) {
+	                        if (!obj[key]) obj._keys.push(key);
+	                        obj[key] = param[key];
+
+	                        var int_key = parseInt(key, 10);
+	                        if (!isNaN(int_key) &#x26;&#x26; int_key &#x3e;= arr_index) {
+	                            arr_index = int_key + 1;
+	                        }
+	                    });
+	                }
+	            });
+	            if (params.length === 0) {
+	                throw new Twig.Error(&#x22;Filter merge expects at least one parameter&#x22;);
+	            }
+
+	            return obj;
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                            // Delete loop-related variables from the context
+	                            delete inner_context[&#x27;loop&#x27;];
+	                            delete inner_context[token.value_var];
+	                            delete inner_context[token.key_var];
+
+	                            // Merge in values that exist in context but have changed
+	                            // in inner_context.
+	                            Twig.<span class="apidocCodeKeywordSpan">merge</span>(context, inner_context, true);
+	                        });
+	                    };
+
+
+	                return Twig.expression.parseAsync.apply(this, [token.expression, context])
+	                .then(function(result) {
+	                    if (Twig.lib.is(&#x27;Array&#x27;, result)) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.nl2br" id="apidoc.element.twig.filters.nl2br">
+        function <span class="apidocSignatureSpan">twig.filters.</span>nl2br
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">nl2br = function (value) {
+	            if (value === undefined || value === null){
+	                return;
+	            }
+	            var linebreak_tag = &#x22;BACKSLASH_n_replace&#x22;,
+	                br = &#x22;&#x3c;br /&#x3e;&#x22; + linebreak_tag;
+
+	            value = Twig.filters.escape(value)
+	                        .replace(/\r\n/g, br)
+	                        .replace(/\r/g, br)
+	                        .replace(/\n/g, br);
+
+	            value = Twig.lib.replaceAll(value, linebreak_tag, &#x22;\n&#x22;);
+
+	            return Twig.Markup(value);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.number_format" id="apidoc.element.twig.filters.number_format">
+        function <span class="apidocSignatureSpan">twig.filters.</span>number_format
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">number_format = function (value, params) {
+	            var number = value,
+	                decimals = (params &#x26;&#x26; params[0]) ? params[0] : undefined,
+	                dec      = (params &#x26;&#x26; params[1] !== undefined) ? params[1] : &#x22;.&#x22;,
+	                sep      = (params &#x26;&#x26; params[2] !== undefined) ? params[2] : &#x22;,&#x22;;
+
+	            number = (number + &#x27;&#x27;).replace(/[^0-9+\-Ee.]/g, &#x27;&#x27;);
+	            var n = !isFinite(+number) ? 0 : +number,
+	                prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+	                s = &#x27;&#x27;,
+	                toFixedFix = function (n, prec) {
+	                    var k = Math.pow(10, prec);
+	                    return &#x27;&#x27; + Math.round(n * k) / k;
+	                };
+	            // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+	            s = (prec ? toFixedFix(n, prec) : &#x27;&#x27; + Math.round(n)).split(&#x27;.&#x27;);
+	            if (s[0].length &#x3e; 3) {
+	                s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+	            }
+	            if ((s[1] || &#x27;&#x27;).length &#x3c; prec) {
+	                s[1] = s[1] || &#x27;&#x27;;
+	                s[1] += new Array(prec - s[1].length + 1).join(&#x27;0&#x27;);
+	            }
+	            return s.join(dec);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.raw" id="apidoc.element.twig.filters.raw">
+        function <span class="apidocSignatureSpan">twig.filters.</span>raw
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">raw = function (value) {
+	            return Twig.Markup(value);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	        }
+
+	        promise = Twig.async.forEach(tokens, function parseToken(token) {
+	            Twig.log.debug(&#x22;Twig.parse: &#x22;, &#x22;Parsing token: &#x22;, token);
+
+	            switch (token.type) {
+	                case Twig.token.type.raw:
+	                    output.push(Twig.filters.<span class="apidocCodeKeywordSpan">raw</span>(token.value));
+	                    break;
+
+	                case Twig.token.type.logic:
+	                    var logic_token = token.token;
+
+	                    return Twig.logic.parseAsync.apply(that, [logic_token, context, chain])
+	                    .then(function(logic) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.replace" id="apidoc.element.twig.filters.replace">
+        function <span class="apidocSignatureSpan">twig.filters.</span>replace
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">replace = function (value, params) {
+	            if (value === undefined||value === null){
+	                return;
+	            }
+
+	            var pairs = params[0],
+	                tag;
+	            for (tag in pairs) {
+	                if (pairs.hasOwnProperty(tag) &#x26;&#x26; tag !== &#x22;_keys&#x22;) {
+	                    value = Twig.lib.replaceAll(value, tag, pairs[tag]);
+	                }
+	            }
+	            return value;
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                        + &#x27;\tvar twig = require(&#x22;twig&#x22;).twig;\n&#x27;
+	                        + &#x27;\texports.template = &#x27; + Twig.compiler.wrap(id, tokens)
+	                    + &#x27;\n});&#x27;
+	        }
+	    };
+
+	    Twig.compiler.wrap = function(id, tokens) {
+	        return &#x27;twig({id:&#x22;&#x27;+id.<span class="apidocCodeKeywordSpan">replace</span>(&#x27;&#x22;&#x27;, &#x27;\\&#
+x22;&#x27;)+&#x27;&#x22;, data:&#x27;+tokens+&#x27;, precompiled: true});\n&#x27;;
+	    };
+
+	    return Twig;
+	};
+
+
+/***/ },
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.reverse" id="apidoc.element.twig.filters.reverse">
+        function <span class="apidocSignatureSpan">twig.filters.</span>reverse
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">reverse = function (value) {
+	            if (is(&#x22;Array&#x22;, value)) {
+	                return value.reverse();
+	            } else if (is(&#x22;String&#x22;, value)) {
+	                return value.split(&#x22;&#x22;).reverse().join(&#x22;&#x22;);
+	            } else if (is(&#x22;Object&#x22;, value)) {
+	                var keys = value._keys || Object.keys(value).reverse();
+	                value._keys = keys;
+	                return value;
+	            }
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                return 0;
+	            }
+	        },
+
+	        // Array/Object Filters
+	        reverse: function(value) {
+	            if (is(&#x22;Array&#x22;, value)) {
+	                return value.<span class="apidocCodeKeywordSpan">reverse</span>();
+	            } else if (is(&#x22;String&#x22;, value)) {
+	                return value.split(&#x22;&#x22;).reverse().join(&#x22;&#x22;);
+	            } else if (is(&#x22;Object&#x22;, value)) {
+	                var keys = value._keys || Object.keys(value).reverse();
+	                value._keys = keys;
+	                return value;
+	            }
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.round" id="apidoc.element.twig.filters.round">
+        function <span class="apidocSignatureSpan">twig.filters.</span>round
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">round = function (value, params) {
+	            params = params || [];
+
+	            var precision = params.length &#x3e; 0 ? params[0] : 0,
+	                method = params.length &#x3e; 1 ? params[1] : &#x22;common&#x22;;
+
+	            value = parseFloat(value);
+
+	            if(precision &#x26;&#x26; !Twig.lib.is(&#x22;Number&#x22;, precision)) {
+	                throw new Twig.Error(&#x22;round filter expects precision to be a number&#x22;);
+	            }
+
+	            if (method === &#x22;common&#x22;) {
+	                return Twig.lib.round(value, precision);
+	            }
+
+	            if(!Twig.lib.is(&#x22;Function&#x22;, Math[method])) {
+	                throw new Twig.Error(&#x22;round filter expects method to be &#x27;floor&#x27;, &#x27;ceil&#x27;, or &#x27;common&#x27;&#x22;);
+	            }
+
+	            return Math[method](value * Math.pow(10, precision)) / Math.pow(10, precision);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+	            number = (number + &#x27;&#x27;).replace(/[^0-9+\-Ee.]/g, &#x27;&#x27;);
+	            var n = !isFinite(+number) ? 0 : +number,
+	                prec = !isFinite(+decimals) ? 0 : Math.abs(decimals),
+	                s = &#x27;&#x27;,
+	                toFixedFix = function (n, prec) {
+	                    var k = Math.pow(10, prec);
+	                    return &#x27;&#x27; + Math.<span class="apidocCodeKeywordSpan">round</span>(n * k) / k;
+	                };
+	            // Fix for IE parseFloat(0.55).toFixed(0) = 0;
+	            s = (prec ? toFixedFix(n, prec) : &#x27;&#x27; + Math.round(n)).split(&#x27;.&#x27;);
+	            if (s[0].length &#x3e; 3) {
+	                s[0] = s[0].replace(/\B(?=(?:\d{3})+(?!\d))/g, sep);
+	            }
+	            if ((s[1] || &#x27;&#x27;).length &#x3c; prec) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.slice" id="apidoc.element.twig.filters.slice">
+        function <span class="apidocSignatureSpan">twig.filters.</span>slice
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">slice = function (value, params) {
+	            if (value === undefined || value === null) {
+	                return;
+	            }
+	            if (params === undefined || params.length &#x3c; 1) {
+	                throw new Twig.Error(&#x22;slice filter expects at least 1 argument&#x22;);
+	            }
+
+	            // default to start of string
+	            var start = params[0] || 0;
+	            // default to length of string
+	            var length = params.length &#x3e; 1 ? params[1] : value.length;
+	            // handle negative start values
+	            var startIndex = start &#x3e;= 0 ? start : Math.max( value.length + start, 0 );
+
+	            if (Twig.lib.is(&#x22;Array&#x22;, value)) {
+	                var output = [];
+	                for (var i = startIndex; i &#x3c; startIndex + length &#x26;&#x26; i &#x3c; value.length; i++) {
+	                    output.push(value[i]);
+	                }
+	                return output;
+	            } else if (Twig.lib.is(&#x22;String&#x22;, value)) {
+	                return value.substr(startIndex, length);
+	            } else {
+	                throw new Twig.Error(&#x22;slice filter expects value to be an array or string&#x22;);
+	            }
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	        // Assume &#x27;fs&#x27; if the loader is not defined
+	        loader = this.loaders[params.method] || this.loaders.fs;
+	        return loader.apply(this, arguments);
+	    };
+
+	    // Determine object type
+	    function is(type, obj) {
+	        var clas = Object.prototype.toString.call(obj).<span class="apidocCodeKeywordSpan">slice</span>(8, -1);
+	        return obj !== undefined &#x26;&#x26; obj !== null &#x26;&#x26; clas === type;
+	    }
+
+	    /**
+	     * Create a new twig.js template.
+	     *
+	     * Parameters: {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.sort" id="apidoc.element.twig.filters.sort">
+        function <span class="apidocSignatureSpan">twig.filters.</span>sort
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">sort = function (value) {
+	            if (is(&#x22;Array&#x22;, value)) {
+	                return value.sort();
+	            } else if (is(&#x27;Object&#x27;, value)) {
+	                // Sorting objects isn&#x27;t obvious since the order of
+	                // returned keys isn&#x27;t guaranteed in JavaScript.
+	                // Because of this we use a &#x22;hidden&#x22; key called _keys to
+	                // store the keys in the order we want to return them.
+
+	                delete value._keys;
+	                var keys = Object.keys(value),
+	                    sorted_keys = keys.sort(function(a, b) {
+	                        var a1, a2;
+
+	                        // if a and b are comparable, we&#x27;re fine :-)
+	                        if((value[a] &#x3e; value[b]) == !(value[a] &#x3c;= value[b])) {
+	                            return value[a] &#x3e; value[b] ? 1 :
+				           value[a] &#x3c; value[b] ? -1 :
+					   0;
+	                        }
+	                        // if a and b can be parsed as numbers, we can compare
+	                        // their numeric value
+	                        else if(!isNaN(a1 = parseFloat(value[a])) &#x26;&#x26;
+	                                !isNaN(b1 = parseFloat(value[b]))) {
+	                            return a1 &#x3e; b1 ? 1 :
+				           a1 &#x3c; b1 ? -1 :
+					   0;
+	                        }
+	                        // if one of the values is a string, we convert the
+	                        // other value to string as well
+	                        else if(typeof value[a] == &#x27;string&#x27;) {
+	                            return value[a] &#x3e; value[b].toString() ? 1 :
+	                                   value[a] &#x3c; value[b].toString() ? -1 :
+					   0;
+	                        }
+	                        else if(typeof value[b] == &#x27;string&#x27;) {
+	                            return value[a].toString() &#x3e; value[b] ? 1 :
+	                                   value[a].toString() &#x3c; value[b] ? -1 :
+					   0;
+	                        }
+	                        // everything failed - return &#x27;null&#x27; as sign, that
+	                        // the values are not comparable
+	                        else {
+	                            return null;
+	                        }
+	                    });
+	                value._keys = sorted_keys;
+	                return value;
+	            }
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                var keys = value._keys || Object.keys(value).reverse();
+	                value._keys = keys;
+	                return value;
+	            }
+	        },
+	        sort: function(value) {
+	            if (is(&#x22;Array&#x22;, value)) {
+	                return value.<span class="apidocCodeKeywordSpan">sort</span>();
+	            } else if (is(&#x27;Object&#x27;, value)) {
+	                // Sorting objects isn&#x27;t obvious since the order of
+	                // returned keys isn&#x27;t guaranteed in JavaScript.
+	                // Because of this we use a &#x22;hidden&#x22; key called _keys to
+	                // store the keys in the order we want to return them.
+
+	                delete value._keys;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.split" id="apidoc.element.twig.filters.split">
+        function <span class="apidocSignatureSpan">twig.filters.</span>split
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">split = function (value, params) {
+	            if (value === undefined || value === null) {
+	                return;
+	            }
+	            if (params === undefined || params.length &#x3c; 1 || params.length &#x3e; 2) {
+	                throw new Twig.Error(&#x22;split filter expects 1 or 2 argument&#x22;);
+	            }
+	            if (Twig.lib.is(&#x22;String&#x22;, value)) {
+	                var delimiter = params[0],
+	                    limit = params[1],
+	                    split = value.split(delimiter);
+
+	                if (limit === undefined) {
+
+	                    return split;
+
+	                } else if (limit &#x3c; 0) {
+
+	                    return value.split(delimiter, split.length + limit);
+
+	                } else {
+
+	                    var limitedSplit = [];
+
+	                    if (delimiter == &#x27;&#x27;) {
+	                        // empty delimiter
+	                        // &#x22;aabbcc&#x22;|split(&#x27;&#x27;, 2)
+	                        //     -&#x3e; [&#x27;aa&#x27;, &#x27;bb&#x27;, &#x27;cc&#x27;]
+
+	                        while(split.length &#x3e; 0) {
+	                            var temp = &#x22;&#x22;;
+	                            for (var i=0; i&#x3c;limit &#x26;&#x26; split.length &#x3e; 0; i++) {
+	                                temp += split.shift();
+	                            }
+	                            limitedSplit.push(temp);
+	                        }
+
+	                    } else {
+	                        // non-empty delimiter
+	                        // &#x22;one,two,three,four,five&#x22;|split(&#x27;,&#x27;, 3)
+	                        //     -&#x3e; [&#x27;one&#x27;, &#x27;two&#x27;, &#x27;three,four,five&#x27;]
+
+	                        for (var i=0; i&#x3c;limit-1 &#x26;&#x26; split.length &#x3e; 0; i++) {
+	                            limitedSplit.push(split.shift());
+	                        }
+
+	                        if (split.length &#x3e; 0) {
+	                            limitedSplit.push(split.join(delimiter));
+	                        }
+	                    }
+
+	                    return limitedSplit;
+	                }
+
+	            } else {
+	                throw new Twig.Error(&#x22;split filter expects value to be a string&#x22;);
+	            }
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	            }
+	        },
+	        {
+	            type: Twig.expression.type.slice,
+	            regex: /^\[(\d*\:\d*)\]/,
+	            next: Twig.expression.set.operations_extended,
+	            compile: function(token, stack, output) {
+	                var sliceRange = token.match[1].<span class="apidocCodeKeywordSpan">split</span>(&#x27;:&#x27;);
+
+	                //sliceStart can be undefined when we pass parameters to the slice filter later
+	                var sliceStart = (sliceRange[0]) ? parseInt(sliceRange[0]) : undefined;
+	                var sliceEnd = (sliceRange[1]) ? parseInt(sliceRange[1]) : undefined;
+
+	                token.value = &#x27;slice&#x27;;
+	                token.params = [sliceStart, sliceEnd];
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.striptags" id="apidoc.element.twig.filters.striptags">
+        function <span class="apidocSignatureSpan">twig.filters.</span>striptags
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">striptags = function (value) {
+	            if (value === undefined || value === null){
+	                return;
+	            }
+
+	            return Twig.lib.strip_tags(value);
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.title" id="apidoc.element.twig.filters.title">
+        function <span class="apidocSignatureSpan">twig.filters.</span>title
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">title = function (value) {
+	            if ( typeof value !== &#x22;string&#x22; ) {
+	               return value;
+	            }
+
+	            return value.toLowerCase().replace( /(^|\s)([a-z])/g , function(m, p1, p2){
+	                return p1 + p2.toUpperCase();
+	            });
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.trim" id="apidoc.element.twig.filters.trim">
+        function <span class="apidocSignatureSpan">twig.filters.</span>trim
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">trim = function (value, params) {
+	            if (value === undefined|| value === null){
+	                return;
+	            }
+
+	            var str = Twig.filters.escape( &#x27;&#x27; + value ),
+	                whitespace;
+	            if ( params &#x26;&#x26; params[0] ) {
+	                whitespace = &#x27;&#x27; + params[0];
+	            } else {
+	                whitespace = &#x27; \n\r\t\f\x0b\xa0\u2000\u2001\u2002\u2003\u2004\u2005\u2006\u2007\u2008\u2009\u200a\u200b\u2028\u2029\u3000&#x27;;
+	            }
+	            for (var i = 0; i &#x3c; str.length; i++) {
+	                if (whitespace.indexOf(str.charAt(i)) === -1) {
+	                    str = str.substring(i);
+	                    break;
+	                }
+	            }
+	            for (i = str.length - 1; i &#x3e;= 0; i--) {
+	                if (whitespace.indexOf(str.charAt(i)) === -1) {
+	                    str = str.substring(0, i + 1);
+	                    break;
+	                }
+	            }
+	            return whitespace.indexOf(str.charAt(0)) === -1 ? str : &#x27;&#x27;;
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                // Find the end of the token
+	                end = Twig.token.findEnd(template, found_token.def, error_offset);
+
+	                Twig.log.trace(&#x22;Twig.tokenize: &#x22;, &#x22;Token ends at &#x22;, end);
+
+	                tokens.push({
+	                    type:  found_token.def.type,
+	                    value: template.substring(0, end).<span class="apidocCodeKeywordSpan">trim</span>()
+	                });
+
+	                if (template.substr( end + found_token.def.close.length, 1 ) === &#x22;\n&#x22;) {
+	                    switch (found_token.def.type) {
+	                        case &#x22;logic_whitespace_pre&#x22;:
+	                        case &#x22;logic_whitespace_post&#x22;:
+	                        case &#x22;logic_whitespace_both&#x22;:
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.truncate" id="apidoc.element.twig.filters.truncate">
+        function <span class="apidocSignatureSpan">twig.filters.</span>truncate
+        <span class="apidocSignatureSpan">(value, params)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">truncate = function (value, params) {
+	            var length = 30,
+	                preserve = false,
+	                separator = &#x27;...&#x27;;
+
+	            value =  value + &#x27;&#x27;;
+	            if (params) {
+	                if (params[0]) {
+	                    length = params[0];
+	                }
+	                if (params[1]) {
+	                    preserve = params[1];
+	                }
+	                if (params[2]) {
+	                    separator = params[2];
+	                }
+	            }
+
+	            if (value.length &#x3e; length) {
+
+	                if (preserve) {
+	                    length = value.indexOf(&#x27; &#x27;, length);
+	                    if (length === -1) {
+	                        return value;
+	                    }
+	                }
+
+	                value =  value.substr(0, length) + separator;
+	            }
+
+	            return value;
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.upper" id="apidoc.element.twig.filters.upper">
+        function <span class="apidocSignatureSpan">twig.filters.</span>upper
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">upper = function (value) {
+	            if ( typeof value !== &#x22;string&#x22; ) {
+	               return value;
+	            }
+
+	            return value.toUpperCase();
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.filters.url_encode" id="apidoc.element.twig.filters.url_encode">
+        function <span class="apidocSignatureSpan">twig.filters.</span>url_encode
+        <span class="apidocSignatureSpan">(value)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">url_encode = function (value) {
+	            if (value === undefined || value === null){
+	                return;
+	            }
+
+	            var result = encodeURIComponent(value);
+	            result = result.replace(&#x22;&#x27;&#x22;, &#x22;%27&#x22;);
+	            return result;
+	        }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                        var char_code = raw_value.charCodeAt(i);
+	                        result += &#x22;\\&#x22; + char_code.toString(16).toUpperCase() + &#x22; &#x22;;
+	                    }
+	                }
+
+	                return Twig.Markup(result, &#x27;css&#x27;);
+	            } else if(strategy == &#x22;url&#x22;) {
+	                var result = Twig.filters.<span class="apidocCodeKeywordSpan">url_encode</span>(value);
+	                return Twig.Markup(result, &#x27;url&#x27;);
+	            } else if(strategy == &#x22;html_attr&#x22;) {
+	                var raw_value = value.toString();
+	                var result = &#x22;&#x22;;
+
+	                for(var i = 0; i &#x3c; raw_value.length; i++) {
+	                    if(raw_value[i].match(/^[a-zA-Z0-9,\.\-_]$/))
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twig.path" id="apidoc.module.twig.path">module twig.path</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twig.path.parsePath" id="apidoc.element.twig.path.parsePath">
+        function <span class="apidocSignatureSpan">twig.path.</span>parsePath
+        <span class="apidocSignatureSpan">(template, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">parsePath = function (template, file) {
+	        var namespaces = null,
+	            file = file || &#x22;&#x22;;
+
+	        if (typeof template === &#x27;object&#x27; &#x26;&#x26; typeof template.options === &#x27;object&#x27;) {
+	            namespaces = template.options.namespaces;
+	        }
+
+	        if (typeof namespaces === &#x27;object&#x27; &#x26;&#x26; (file.indexOf(&#x27;::&#x27;) &#x3e; 0) || file.indexOf(&#x27;@&#x27;) &#x3e;= 0){
+	            for (var k in namespaces){
+	                if (namespaces.hasOwnProperty(k)) {
+	                    file = file.replace(k + &#x27;::&#x27;, namespaces[k]);
+	                    file = file.replace(&#x27;@&#x27; + k, namespaces[k]);
+	                }
+	            }
+
+	            return file;
+	        }
+
+	        return Twig.path.relativePath(template, file);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                    if ( ext_template ) {
+	                        ext_template.options = that.options;
+	                    }
+	                }
+
+	                // check for the template file via include
+	                if (!ext_template) {
+	                    url = Twig.path.<span class="apidocCodeKeywordSpan">parsePath</span>(that, that.extend);
+
+	                    ext_template = Twig.Templates.loadRemote(url, {
+	                        method: that.getLoaderMethod(),
+	                        base: that.base,
+	                        async:  false,
+	                        id:     url,
+	                        options: that.options
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.path.relativePath" id="apidoc.element.twig.path.relativePath">
+        function <span class="apidocSignatureSpan">twig.path.</span>relativePath
+        <span class="apidocSignatureSpan">(template, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">relativePath = function (template, file) {
+	        var base,
+	            base_path,
+	            sep_chr = &#x22;/&#x22;,
+	            new_path = [],
+	            file = file || &#x22;&#x22;,
+	            val;
+
+	        if (template.url) {
+	            if (typeof template.base !== &#x27;undefined&#x27;) {
+	                base = template.base + ((template.base.charAt(template.base.length-1) === &#x27;/&#x27;) ? &#x27;&#x27; : &#x27;/&#x27;);
+	            } else {
+	                base = template.url;
+	            }
+	        } else if (template.path) {
+	            // Get the system-specific path separator
+	            var path = __webpack_require__(20),
+	                sep = path.sep || sep_chr,
+	                relative = new RegExp(&#x22;^\\.{1,2}&#x22; + sep.replace(&#x22;\\&#x22;, &#x22;\\\\&#x22;));
+	            file = file.replace(/\//g, sep);
+
+	            if (template.base !== undefined &#x26;&#x26; file.match(relative) == null) {
+	                file = file.replace(template.base, &#x27;&#x27;);
+	                base = template.base + sep;
+	            } else {
+	                base = path.normalize(template.path);
+	            }
+
+	            base = base.replace(sep+sep, sep);
+	            sep_chr = sep;
+	        } else if ((template.name || template.id) &#x26;&#x26; template.method &#x26;&#x26; template.method !== &#x27;fs&#x27; &#x26;&#x26; template.method !== &#x27;ajax&#x27;) {
+	            // Custom registered loader
+	            base = template.base || template.name || template.id;
+	        } else {
+	            throw new Twig.Error(&#x22;Cannot extend an inline template.&#x22;);
+	        }
+
+	        base_path = base.split(sep_chr);
+
+	        // Remove file from url
+	        base_path.pop();
+	        base_path = base_path.concat(file.split(sep_chr));
+
+	        while (base_path.length &#x3e; 0) {
+	            val = base_path.shift();
+	            if (val == &#x22;.&#x22;) {
+	                // Ignore
+	            } else if (val == &#x22;..&#x22; &#x26;&#x26; new_path.length &#x3e; 0 &#x26;&#x26; new_path[new_path.length-1] != &#x22;..&#x22;) {
+	                new_path.pop();
+	            } else {
+	                new_path.push(val);
+	            }
+	        }
+
+	        return new_path.join(sep_chr);
+	    }</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                    file = file.replace(&#x27;@&#x27; + k, namespaces[k]);
+	                }
+	            }
+
+	            return file;
+	        }
+
+	        return Twig.path.<span class="apidocCodeKeywordSpan">relativePath</span>(template, file);
+	    };
+
+	    /**
+	     * Generate the relative canonical version of a url based on the given base path and file path.
+	     *
+	     * @param {Twig.Template} template The Twig.Template.
+	     * @param {string} file The file path, relative to the base path.
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.twig.paths" id="apidoc.module.twig.paths">module twig.paths</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.twig.paths.findBase" id="apidoc.element.twig.paths.findBase">
+        function <span class="apidocSignatureSpan">twig.paths.</span>findBase
+        <span class="apidocSignatureSpan">(file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">findBase = function (file) {
+    var paths = exports.normalize(file.split(sep_chr));
+    // we want everything before the file
+    if (paths.length &#x3e; 1) {
+        // get rid of the filename
+        paths.pop();
+        return paths.join(sep_chr) + sep_chr;
+    } else {
+        // we&#x27;re in the file directory
+        return &#x22;&#x22;;
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+});
+    }
+
+    function parseTemplateFile(file, base) {
+if (base) base = PATHS.strip_slash(base);
+var split_file = file.split(&#x22;/&#x22;)
+    , output_file_name = split_file.pop()
+    , output_file_base = PATHS.<span class="apidocCodeKeywordSpan">findBase</span>(file)
+    , output_directory = options.output
+    , output_base = PATHS.removePath(base, output_file_base)
+    , output_id
+    , output_file;
+
+if (output_directory) {
+    // Create template directory
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.paths.mkdir" id="apidoc.element.twig.paths.mkdir">
+        function <span class="apidocSignatureSpan">twig.paths.</span>mkdir
+        <span class="apidocSignatureSpan">(dir)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">mkdir = function (dir) {
+    try {
+        FS.mkdirSync(dir);
+    } catch (err) {
+        if (err.code == &#x22;EEXIST&#x22;)  {
+            // ignore if it&#x27;s a &#x22;EEXIST&#x22; exeption
+        }  else {
+            console.log(err);
+            throw err;
+        }
+    }
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+, pattern: &#x22;*\\.twig&#x22;
+, recursive: false
+};
+
+exports.compile = function(options, files) {
+// Create output template directory if necessary
+if (options.output) {
+    PATHS.<span class="apidocCodeKeywordSpan">mkdir</span>(options.output);
+}
+
+files.forEach(function(file) {
+    FS.stat(file, function(err, stats) {
+        if (stats.isDirectory()) {
+            parseTemplateFolder(file, options.pattern);
+        } else if (stats.isFile()) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.paths.normalize" id="apidoc.element.twig.paths.normalize">
+        function <span class="apidocSignatureSpan">twig.paths.</span>normalize
+        <span class="apidocSignatureSpan">(file_arr)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">normalize = function (file_arr) {
+    var new_arr = []
+        , val;
+    while(file_arr.length &#x3e; 0) {
+        val = file_arr.shift();
+        if (val !== &#x27;&#x27;) {
+            new_arr.push(val);
+        }
+    }
+    return new_arr;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                relative = new RegExp(&#x22;^\\.{1,2}&#x22; + sep.replace(&#x22;\\&#x22;, &#x22;\\\\&#x22;));
+	            file = file.replace(/\//g, sep);
+
+	            if (template.base !== undefined &#x26;&#x26; file.match(relative) == null) {
+	                file = file.replace(template.base, &#x27;&#x27;);
+	                base = template.base + sep;
+	            } else {
+	                base = path.<span class="apidocCodeKeywordSpan">normalize</span>(template.path);
+	            }
+
+	            base = base.replace(sep+sep, sep);
+	            sep_chr = sep;
+	        } else if ((template.name || template.id) &#x26;&#x26; template.method &#x26;&#x26; template.method !== &#x27;fs&#x27; &#
+x26;&#x26; template.method !== &#x27;ajax&#x27;) {
+	            // Custom registered loader
+	            base = template.base || template.name || template.id;
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.paths.relativePath" id="apidoc.element.twig.paths.relativePath">
+        function <span class="apidocSignatureSpan">twig.paths.</span>relativePath
+        <span class="apidocSignatureSpan">(base, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">relativePath = function (base, file) {
+    var base_path = exports.normalize(base.split(sep_chr)),
+        new_path = [],
+        val;
+
+    // Remove file from url
+    base_path.pop();
+    base_path = base_path.concat(file.split(sep_chr));
+
+    while (base_path.length &#x3e; 0) {
+        val = base_path.shift();
+        if (val == &#x22;.&#x22;) {
+            // Ignore
+        } else if (val == &#x22;..&#x22; &#x26;&#x26; new_path.length &#x3e; 0 &#x26;&#x26; new_path[new_path.length-1] != &#x22;..&#x22;) {
+            new_path.pop();
+        } else {
+            new_path.push(val);
+        }
+    }
+
+    return new_path.join(sep_chr);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+	                    file = file.replace(&#x27;@&#x27; + k, namespaces[k]);
+	                }
+	            }
+
+	            return file;
+	        }
+
+	        return Twig.path.<span class="apidocCodeKeywordSpan">relativePath</span>(template, file);
+	    };
+
+	    /**
+	     * Generate the relative canonical version of a url based on the given base path and file path.
+	     *
+	     * @param {Twig.Template} template The Twig.Template.
+	     * @param {string} file The file path, relative to the base path.
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.paths.removePath" id="apidoc.element.twig.paths.removePath">
+        function <span class="apidocSignatureSpan">twig.paths.</span>removePath
+        <span class="apidocSignatureSpan">(path, file)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">removePath = function (path, file) {
+    if (!path) return &#x22;&#x22;;
+
+    var base_path = exports.normalize(path.split(sep_chr))
+        , file_path = exports.normalize(file.split(sep_chr))
+        , val
+        , file_val;
+
+    // strip base path off of file path
+    while(base_path.length &#x3e; 0) {
+        val = base_path.shift();
+        if (val !== &#x27;&#x27;) {
+            file_val = file_path.shift();
+        }
+    }
+    return file_path.join(sep_chr);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+    function parseTemplateFile(file, base) {
+if (base) base = PATHS.strip_slash(base);
+var split_file = file.split(&#x22;/&#x22;)
+    , output_file_name = split_file.pop()
+    , output_file_base = PATHS.findBase(file)
+    , output_directory = options.output
+    , output_base = PATHS.<span class="apidocCodeKeywordSpan">removePath</span>(base, output_file_base)
+    , output_id
+    , output_file;
+
+if (output_directory) {
+    // Create template directory
+    if (output_base !== &#x22;&#x22;) {
+        PATHS.mkdir(output_directory + &#x22;/&#x22; + output_base);
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.twig.paths.strip_slash" id="apidoc.element.twig.paths.strip_slash">
+        function <span class="apidocSignatureSpan">twig.paths.</span>strip_slash
+        <span class="apidocSignatureSpan">(path)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">strip_slash = function (path) {
+    if (path.substr(-1) == &#x27;/&#x27;) path = path.substring(0, path.length-1);
+    return path;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    } else {
+        console.log(&#x22;ERROR &#x22; + file + &#x22;: Unable to stat file&#x22;);
+    }
+});
+    });
+
+    function parseTemplateFolder(directory, pattern) {
+directory = PATHS.<span class="apidocCodeKeywordSpan">strip_slash</span>(directory);
+
+       // Get the files in the directory
+       // Walker options
+var walker  = WALK.walk(directory, { followLinks: false })
+    , files = [];
+
+walker.on(&#x27;file&#x27;, function(root, stat, next) {
+...</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
