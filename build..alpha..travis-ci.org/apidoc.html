@@ -843,7 +843,24 @@
     <li>description and source-code<pre class="apidocCodePre">extendFunction = function (fn, definition) {
 	        Twig._function.extend(fn, definition);
 	    }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+twig({data: &#x27;{% for note in notes %}{{note}}{% endfor %}&#x27;}).render({notes:[&#x27;a&#x27;, &#x27;b&#x27;, &#x27;c&#x27;]}).
+should.equal(&#x22;abc&#x22;);
+```
+
+#56 functions work inside parentheses.
+
+```js
+// Define and save a template
+Twig.<span class="apidocCodeKeywordSpan">extendFunction</span>(&#x27;custom&#x27;, function(value) {
+    return true;
+});
+twig({data: &#x27;{% if (custom(&#x22;val&#x22;) and custom(&#x22;val&#x22;)) %}out{% endif %}&#x27;}).render({}).should.equal(&#
+x22;out&#x22;);
+```
+
+#83 Support for trailing commas in arrays.
+...</pre></li>
     </ul>
 
 
@@ -858,7 +875,22 @@
     <li>description and source-code<pre class="apidocCodePre">extendTag = function (definition) {
 	        Twig.logic.extend(definition);
 	    }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+&#x3c;a name=&#x22;twigjs-extensions--&#x22;&#x3e;&#x3c;/a&#x3e;
+# Twig.js Extensions -&#x3e;
+should be able to extend a meta-type tag.
+
+```js
+var flags = {};
+	Twig.extend(function(Twig) {
+		Twig.exports.<span class="apidocCodeKeywordSpan">extendTag</span>({
+	            type: &#x22;flag&#x22;,
+	            regex: /^flag\s+(.+)$/,
+		        next: [ ],
+		        open: true,
+	            compile: function (token) {
+	                var expression = token.match[1];
+...</pre></li>
     </ul>
 
 
@@ -2770,21 +2802,21 @@ if (output_directory) {
     return path;
 }</pre></li>
     <li>example usage<pre class="apidocCodePre">...
-    } else {
-        console.log(&#x22;ERROR &#x22; + file + &#x22;: Unable to stat file&#x22;);
-    }
-});
-    });
-
-    function parseTemplateFolder(directory, pattern) {
-directory = PATHS.<span class="apidocCodeKeywordSpan">strip_slash</span>(directory);
-
-       // Get the files in the directory
-       // Walker options
-var walker  = WALK.walk(directory, { followLinks: false })
-    , files = [];
-
-walker.on(&#x27;file&#x27;, function(root, stat, next) {
+arg = args.shift();
+switch (arg) {
+    case &#x22;--help&#x22;:
+        printUsage(process.stdout);
+        return;
+    case &#x22;--output&#x22;:
+    case &#x22;-o&#x22;:
+        options.output = PATHS.<span class="apidocCodeKeywordSpan">strip_slash</span>(args.shift());
+        break;
+    case &#x22;--pattern&#x22;:
+    case &#x22;-p&#x22;:
+        options.pattern = args.shift();
+        break;
+    case &#x22;--module&#x22;:
+    case &#x22;-m&#x22;:
 ...</pre></li>
     </ul>
 
