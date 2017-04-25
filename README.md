@@ -1,6 +1,6 @@
 # npmdoc-twig
 
-#### api documentation for  [twig (v1.10.4)](https://github.com/twigjs/twig.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-twig.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-twig) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-twig.svg)](https://travis-ci.org/npmdoc/node-npmdoc-twig)
+#### basic api documentation for  [twig (v1.10.4)](https://github.com/twigjs/twig.js)  [![npm package](https://img.shields.io/npm/v/npmdoc-twig.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-twig) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-twig.svg)](https://travis-ci.org/npmdoc/node-npmdoc-twig)
 
 #### JS port of the Twig templating language.
 
@@ -21,41 +21,25 @@
 ```json
 
 {
-    "author": "John Roepke <john@justjohn.us> (http://john.sh/)",
-    "name": "twig",
-    "description": "JS port of the Twig templating language.",
-    "version": "1.10.4",
-    "homepage": "https://github.com/twigjs/twig.js",
-    "licenses": [
-        {
-            "type": "BSD-2-Clause",
-            "url": "https://raw.github.com/twigjs/twig.js/master/LICENSE"
-        }
-    ],
-    "repository": {
-        "type": "git",
-        "url": "git://github.com/twigjs/twig.js.git"
-    },
-    "main": "twig.js",
-    "engines": {
-        "node": "*"
+    "author": {
+        "name": "John Roepke",
+        "url": "http://john.sh/"
     },
     "bin": {
         "twigjs": "./bin/twigjs"
     },
-    "scripts": {
-        "preversion": "npm test && git diff --exit-code --quiet",
-        "postversion": "git push origin master && git push origin master --tags",
-        "test": "npm run build && mocha -r should",
-        "build-node": "webpack",
-        "build-browser": "WEBPACK_ENV=browser webpack",
-        "build": "npm run build-node && npm run build-browser"
+    "browser": {
+        "fs": false
+    },
+    "bugs": {
+        "url": "https://github.com/twigjs/twig.js/issues"
     },
     "dependencies": {
-        "minimatch": "3.0.x",
         "locutus": "^2.0.5",
+        "minimatch": "3.0.x",
         "walk": "2.3.x"
     },
+    "description": "JS port of the Twig templating language.",
     "devDependencies": {
         "chai": "^3.5.0",
         "mocha": "3.1.x",
@@ -65,9 +49,52 @@
         "tokenizer": "1.1.x",
         "webpack": "^1.13.3"
     },
-    "browser": {
-        "fs": false
-    }
+    "directories": {},
+    "dist": {
+        "shasum": "2ebad1e7e38c02b9cc772934822da1163d4ad4a1",
+        "tarball": "https://registry.npmjs.org/twig/-/twig-1.10.4.tgz"
+    },
+    "engines": {
+        "node": "*"
+    },
+    "gitHead": "56e2f9123f80037ecb97f96b0e07b98edf021982",
+    "homepage": "https://github.com/twigjs/twig.js",
+    "licenses": [
+        {
+            "type": "BSD-2-Clause",
+            "url": "https://raw.github.com/twigjs/twig.js/master/LICENSE"
+        }
+    ],
+    "main": "twig.js",
+    "maintainers": [
+        {
+            "name": "dave-irvine"
+        },
+        {
+            "name": "evgenius"
+        },
+        {
+            "name": "justjohn"
+        },
+        {
+            "name": "plepe"
+        }
+    ],
+    "name": "twig",
+    "optionalDependencies": {},
+    "repository": {
+        "type": "git",
+        "url": "git://github.com/twigjs/twig.js.git"
+    },
+    "scripts": {
+        "build": "npm run build-node && npm run build-browser",
+        "build-browser": "WEBPACK_ENV=browser webpack",
+        "build-node": "webpack",
+        "postversion": "git push origin master && git push origin master --tags",
+        "preversion": "npm test && git diff --exit-code --quiet",
+        "test": "npm run build && mocha -r should"
+    },
+    "version": "1.10.4"
 }
 ```
 
